@@ -1,7 +1,10 @@
 <template>
-  <Tutorial/>
+  <MyChart/>
 </template>
 
 <script>
-export default {}
+import MyChart from "../components/MyChart";
+export default {
+  components: { MyChart }
+}
 </script>
