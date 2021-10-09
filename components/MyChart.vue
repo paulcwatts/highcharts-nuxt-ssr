@@ -1,14 +1,25 @@
 <template>
   <div>
     <client-only>
-      <Chart/>
+      <highcharts :options="chartOptions"/>
     </client-only>
   </div>
 </template>
 <script>
-import { Chart } from "highcharts-vue";
-
 export default {
-  components: { Chart }
-};
+  computed: {
+    chartOptions: () => ({
+      title: {
+        text: "test",
+      },
+      series: [
+        {
+          type: "line",
+          name: "test",
+          data: [[1, 1], [2, 3]]
+        },
+      ],
+    })
+  }
+}
 </script>
